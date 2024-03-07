@@ -15,11 +15,18 @@ return require('packer').startup(function(use)
 
   use({
 	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
+	  as = 'rose-pine'
   })
+        
+  use({
+      'dracula/vim',
+      as = 'dracula',
+      config = function()
+          vim.cmd('colorscheme dracula')
+      end
+            })
+        
+        use({'rakr/vim-one'})
 
   use({
       "folke/trouble.nvim",
